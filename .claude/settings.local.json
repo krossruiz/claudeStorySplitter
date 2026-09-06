@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ffmpeg -version)",
+      "Bash(ffprobe -version)",
+      "Bash(py --version)",
+      "Bash(ffmpeg -hide_banner -loglevel error -f lavfi -i testsrc=duration=250:size=320x240:rate=30 -f lavfi -i sine=frequency=440:duration=250 -c:v libx264 -g 30 -pix_fmt yuv420p -c:a aac -shortest test_clip.mp4)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(python split_video.py --help)",
+      "Bash(python split_video.py -h)"
+    ]
+  }
+}
